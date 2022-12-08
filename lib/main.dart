@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      debugShowCheckedModeBanner: false,
       home: LoginForm(),
     );
   }
@@ -111,29 +112,11 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffd6e2ea),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: 400,
-              decoration: const BoxDecoration(
-                color: Colors.blue,
-                borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
-              ),
-              padding: const EdgeInsets.symmetric(
-                horizontal: 15,
-                vertical: 15 / 2,
-              ),
-              child: Center(
-                child: Text(
-                  "Login",
-                  style: Theme.of(context).textTheme.headline6!.copyWith(
-                        color: Colors.white,
-                      ),
-                ),
-              ),
-            ),
             if (_teddyArtboard != null)
               SizedBox(
                 width: 400,
@@ -148,10 +131,10 @@ class _LoginFormState extends State<LoginForm> {
               width: 400,
               padding: const EdgeInsets.only(bottom: 15),
               margin: const EdgeInsets.only(bottom: 15 * 4),
-              decoration: const BoxDecoration(
-                color: Color(0xffd6e2ea),
+              decoration: BoxDecoration(
+                color: Colors.white,
                 borderRadius:
-                    BorderRadius.vertical(bottom: Radius.circular(10)),
+                    BorderRadius.circular(10),
               ),
               child: Column(
                 children: [
@@ -166,13 +149,21 @@ class _LoginFormState extends State<LoginForm> {
                           onChanged: moveEyeBalls,
                           keyboardType: TextInputType.emailAddress,
                           style: const TextStyle(fontSize: 14),
+                          cursorColor: const Color(0xffb04863),
                           decoration: const InputDecoration(
                             hintText: "Email/Username",
-                            fillColor: Color(0xffd6e2ea),
                             filled: true,
                             border: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
+                            ),
+                            focusColor: Color(0xffb04863),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xffb04863),
+                              ),
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(10)),
                             ),
                           ),
                         ),
@@ -183,11 +174,19 @@ class _LoginFormState extends State<LoginForm> {
                           keyboardType: TextInputType.visiblePassword,
                           obscureText: true,
                           style: const TextStyle(fontSize: 14),
+                          cursorColor: const Color(0xffb04863),
                           decoration: const InputDecoration(
                             hintText: "Password",
-                            fillColor: Color(0xffd6e2ea),
                             filled: true,
                             border: OutlineInputBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)),
+                            ),
+                            focusColor: Color(0xffb04863),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xffb04863),
+                              ),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
                             ),
@@ -210,6 +209,9 @@ class _LoginFormState extends State<LoginForm> {
                             ),
                             ElevatedButton(
                               onPressed: login,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xffb04863),
+                              ),
                               child: const Text("Login"),
                             ),
                           ],
