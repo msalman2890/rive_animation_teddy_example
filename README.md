@@ -2,15 +2,9 @@
 
 A project to demostrate about the rive annimations in Flutter
 
-## Getting Started
+You can also watch the complete video tutorial on rive animation implementation with interactive login UI and teddy animation.
 
-This project is a starting point for a Flutter application.
+- [Complete Video Tutorial - https://youtu.be/FPAr1PsZ080](https://youtu.be/FPAr1PsZ080)
 
-A few resources to get you started if this is your first Flutter project:
+![Video Thumbnail](https://img.youtube.com/vi/FPAr1PsZ080/0.jpg)](https://youtu.be/FPAr1PsZ080)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
